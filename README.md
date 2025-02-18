@@ -16,6 +16,7 @@ docker compose up
 
 ### Available Commands
 
+- `npm install`: Installs all dependencies across the monorepo
 - `npm run build`: Builds all packages and applications in the monorepo using Turborepo
 - `npm run dev`: Starts all applications in development mode
 - `npm run lint`: Runs linting across all packages and applications
