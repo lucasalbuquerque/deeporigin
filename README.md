@@ -11,7 +11,7 @@ DeepOrigin allows users to create shortened versions of long URLs, making them e
 You can run the application using the following commands:
 
 ```bash
-docker compose up
+docker compose up -d --build
 ```
 
 ### Available Commands
