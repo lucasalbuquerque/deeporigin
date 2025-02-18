@@ -1,84 +1,64 @@
-# Turborepo starter
+# DeepOrigin - URL Shortener
 
-This Turborepo starter is maintained by the Turborepo core team.
+A modern URL shortening service built with a Next.js frontend and NestJS backend.
 
-## Using this example
+## Overview
 
-Run the following command:
+DeepOrigin allows users to create shortened versions of long URLs, making them easier to share and remember. For example:
 
-```sh
-npx create-turbo@latest
+### Running the Application
+
+You can run the application using the following commands:
+
+```bash
+docker compose up
 ```
 
-## What's inside?
+### Available Commands
 
-This Turborepo includes the following packages/apps:
+- `npm run build`: Builds all packages and applications in the monorepo using Turborepo
+- `npm run dev`: Starts all applications in development mode
+- `npm run lint`: Runs linting across all packages and applications
+- `npm run format`: Formats all TypeScript, TSX, and Markdown files using Prettier
+- `npm run check-types`: Runs TypeScript type checking across all packages
 
-### Apps and Packages
+This will start the Next.js frontend and NestJS backend, and make them available at `http://localhost:3000` and `http://localhost:3001` respectively.
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### Creating a Short URL
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+To create a short URL, navigate to the frontend application at `http://localhost:3000` and follow the instructions.
 
-### Utilities
+### Redirecting to the Original URL
 
-This Turborepo has some additional tools already setup for you:
+To redirect to the original URL, navigate to `http://localhost:3000/your-short-url` in your browser.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## Technologies Used
 
-### Build
+### Frontend
 
-To build all apps and packages, run the following command:
+The frontend is built with Next.js and TypeScript. It uses the following technologies:
 
-```
-cd my-turborepo
-pnpm build
-```
+- Next.js
+- TypeScript
+- Tailwind CSS
 
-### Develop
+### Backend
 
-To develop all apps and packages, run the following command:
+The backend is built with NestJS and TypeScript. It uses the following technologies:
 
-```
-cd my-turborepo
-pnpm dev
-```
+- NestJS
+- TypeScript
+- TypeORM
+- SQLite
 
-### Remote Caching
+## Contributing
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+We welcome contributions to DeepOrigin! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+## License
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+DeepOrigin is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-```
-cd my-turborepo
-npx turbo login
-```
+## Contact
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+For questions or feedback, please contact us at [lucasalbuquerquejs@gmail.com](mailto:lucasalbuquerquejs@gmail.com).
