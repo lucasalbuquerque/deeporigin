@@ -1,17 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { nanoid } from 'nanoid';
 import { Repository } from 'typeorm';
 import { Url } from './entities/url.entity';
+import { randomStringGenerator } from '@nestjs/common/utils/random-string-generator.util';
 
 @Injectable()
 export class UrlsService {
   constructor(@InjectRepository(Url) private urlsRepo: Repository<Url>) {}
 
   async shortenUrl(originalUrl: string): Promise<string> {
-    let slug = nanoid(6);
+    let slug = randomStringGenerator().slice(0, 6);
     while (await this.urlsRepo.findOne({ where: { slug } })) {
-      slug = nanoid(6);
+      slug = randomStringGenerator().slice(0, 6);
     }
     const urlEntry = this.urlsRepo.create({ slug, originalUrl });
     await this.urlsRepo.save(urlEntry);
