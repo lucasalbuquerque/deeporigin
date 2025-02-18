@@ -20,6 +20,7 @@ RUN npm install
 
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
+RUN npm install
 RUN npm run build -- --filter=web...
 
 FROM base AS runner
